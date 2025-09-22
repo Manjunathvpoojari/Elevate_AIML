@@ -28,7 +28,7 @@ Outlier Detection and Removal: Outliers in the Fare column were identified using
 
 Feature Scaling: The numerical features (Age, Fare, SibSp, Parch) were standardized using StandardScaler to ensure they were on a consistent scale for the machine learning algorithm.
 
-Repository Contents 📂
+# Repository Contents 📂
 Titanic-Dataset.csv: The original, raw dataset.
 
 data_preprocessing.ipynb: The Python code used for the data cleaning and preprocessing steps.
