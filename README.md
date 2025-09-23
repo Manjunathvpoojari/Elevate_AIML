@@ -118,6 +118,6 @@ Feature Correlations:
 # Repository Contents 📂
 Titanic-Dataset.csv: The original, raw dataset.
 
-Elevate_labs(AIML task1)\data_preprocessing.ipynb: The Python code used for the data cleaning and preprocessing steps.
-Elevate_labs(AIML task2)\EDA_titanic.ipynb:  Exploratory Data Analysis
+- Elevate_labs(AIML task1)\data_preprocessing.ipynb: The Python code used for the data cleaning and preprocessing steps.
+- Elevate_labs(AIML task2)\EDA_titanic.ipynb:  Exploratory Data Analysis
 
