@@ -1,6 +1,6 @@
 # Elevate Labs AI & ML Internship Tasks
 
-This repository contains comprehensive solutions for four major data science tasks from the Elevate Labs AI & ML Internship program.
+This repository contains comprehensive solutions for five major data science tasks from the Elevate Labs AI & ML Internship program.
 
 ## 📋 Project Overview
 
@@ -15,6 +15,9 @@ This repository contains comprehensive solutions for four major data science tas
 
 ### Task 4: Classification Models 🎯
 **Objective:** Build and evaluate various classification algorithms for predictive modeling.
+
+### Task 5: Decision Trees and Random Forests 🌳
+**Objective:** Learn tree-based models for classification & regression with heart disease data.
 
 ---
 
@@ -40,10 +43,6 @@ This repository contains comprehensive solutions for four major data science tas
 - Created **IsAlone** flag for passengers traveling alone
 - Binned continuous variables like Age and Fare for better analysis
 
-#### Data Type Corrections
-- Ensured proper data types for all columns
-- Handled numerical and categorical variables appropriately
-
 ---
 
 ## 📊 Task 2: Exploratory Data Analysis (EDA)
@@ -66,46 +65,11 @@ This repository contains comprehensive solutions for four major data science tas
 - **Fare Correlation:** Higher fares correlated with better survival chances
 - **Family Size:** Small families (2-4) had optimal survival rates
 
-### Advanced Analysis
-- Survival rates by multiple factors (class × gender × age)
-- Family structure impact on survival
-- Embarkation port analysis
-
 ---
 
 ## 📈 Task 3: Linear Regression Implementation
 
 ### 🏠 Housing Price Prediction Analysis
-**Dataset:** Housing.csv containing property features and prices
-
-### Key Implementation Steps
-
-#### Data Preprocessing
-- Converted categorical variables (yes/no) to binary encoding (1/0)
-- Label encoding for furnishing status
-- Feature correlation analysis
-
-#### Simple Linear Regression
-- **Model:** Price vs Area only
-- **Equation:** Price = β₀ + β₁ × Area
-- **Performance:** R² ~0.55-0.60
-
-#### Multiple Linear Regression
-- **Model:** Price vs 12 features including area, bedrooms, bathrooms, amenities
-- **Performance:** R² ~0.65-0.70 (significant improvement)
-
-#### Feature Engineering
-- Created `area_per_bedroom` and `luxury_score` features
-- Further improved model performance
-
-### Key Findings
-
-#### Most Influential Features (by coefficient magnitude):
-- **Area:** Strongest positive predictor (+1,045 per sq ft)
-- **Air Conditioning:** Significant value addition
-- **Preferred Area:** Location premium pricing
-- **Bathrooms:** Substantial value contribution
-- **Parking:** Added property value
 
 #### Model Performance Comparison:
 
@@ -115,78 +79,18 @@ This repository contains comprehensive solutions for four major data science tas
 | Multiple Regression | 0.65-0.70 | Lower | Lower |
 | With Engineered Features | 0.68-0.72 | Lowest | Lowest |
 
-### Technical Implementation
-**Evaluation Metrics Used:**
-- R² Score (Coefficient of Determination)
-- Mean Absolute Error (MAE)
-- Root Mean Square Error (RMSE)
-- Residual Analysis
-
-**Visualizations Created:**
-- Correlation heatmaps
-- Actual vs Predicted scatter plots
-- Residual plots for error analysis
-- Feature coefficient comparisons
+#### Most Influential Features:
+- **Area:** Strongest positive predictor (+1,045 per sq ft)
+- **Air Conditioning:** Significant value addition
+- **Preferred Area:** Location premium pricing
+- **Bathrooms:** Substantial value contribution
+- **Parking:** Added property value
 
 ---
 
 ## 🎯 Task 4: Classification Models Implementation
 
 ### 🩺 Breast Cancer Classification Analysis
-**Dataset:** Wisconsin Breast Cancer Diagnostic dataset with 30+ medical features
-
-### Key Implementation Steps
-
-#### Data Preprocessing & Feature Engineering
-- **Missing Value Handling:** Comprehensive NaN detection and imputation strategies
-- **Feature Selection:** SelectKBest with ANOVA F-value for top feature identification
-- **Data Scaling:** StandardScaler for feature normalization
-- **Class Balance Analysis:** Stratified sampling for training/test splits
-
-#### Classification Algorithms Implemented
-
-##### 1. Logistic Regression
-- **Baseline Model:** High interpretability with coefficient analysis
-- **Regularization:** L2 penalty to prevent overfitting
-- **Performance Metrics:** Accuracy, Precision, Recall, F1-score, ROC-AUC
-
-##### 2. Support Vector Machines (SVM)
-- **Kernel Selection:** Linear and RBF kernel comparison
-- **Hyperparameter Tuning:** GridSearchCV for optimal C and gamma parameters
-- **Decision Boundary Analysis:** Margin maximization visualization
-
-##### 3. Random Forest Classifier
-- **Ensemble Method:** Bagging with multiple decision trees
-- **Feature Importance:** Gini importance for medical feature ranking
-- **Out-of-Bag Error:** Internal validation metric
-
-##### 4. Gradient Boosting (XGBoost)
-- **Advanced Ensemble:** Sequential tree building with gradient optimization
-- **Early Stopping:** Prevention of overfitting during training
-- **Cross-Validation:** Robust performance evaluation
-
-### Model Evaluation Framework
-
-#### Performance Metrics
-- **Accuracy:** Overall classification correctness
-- **Precision:** Malignant prediction reliability
-- **Recall:** Sensitivity in detecting actual malignancies
-- **F1-Score:** Harmonic mean of precision and recall
-- **ROC-AUC:** Overall model discrimination ability
-
-#### Validation Techniques
-- **Stratified K-Fold Cross-Validation:** 5-fold CV with class balance preservation
-- **Confusion Matrix Analysis:** Detailed error type examination
-- **Learning Curves:** Bias-variance tradeoff assessment
-
-### Key Findings & Medical Insights
-
-#### Top Predictive Features Identified:
-1. **Worst Area:** Strongest predictor of malignancy
-2. **Mean Perimeter:** Significant morphological indicator
-3. **Worst Concavity:** Critical shape characteristic
-4. **Mean Concave Points:** Important texture feature
-5. **Worst Radius:** Size-related malignancy indicator
 
 #### Model Performance Comparison:
 
@@ -197,37 +101,87 @@ This repository contains comprehensive solutions for four major data science tas
 | Random Forest | 0.95-0.97 | 0.96-0.98 | 0.93-0.96 | 0.95-0.97 | 0.98-0.99 |
 | XGBoost | 0.97-0.99 | 0.98-0.99 | 0.95-0.98 | 0.97-0.98 | 0.99-0.997 |
 
-### Advanced Analysis Techniques
+---
 
-#### Feature Importance Interpretation
-- **Medical Relevance:** Correlation of top features with clinical indicators
-- **Multicollinearity Analysis:** Handling correlated medical measurements
-- **Dimensionality Reduction:** PCA for feature space visualization
+## 🌳 Task 5: Decision Trees and Random Forests
 
-#### Model Interpretability
-- **SHAP Values:** Game-theoretic approach to feature contribution
-- **Partial Dependence Plots:** Individual feature effect visualization
-- **Decision Boundary Visualization:** 2D projection of classification regions
+### 🫀 Heart Disease Classification Analysis
 
-#### Clinical Application Insights
-- **Early Detection:** Model's ability to identify malignancies with high precision
-- **False Negative Reduction:** Recall optimization for medical safety
-- **Feature Thresholds:** Clinical decision support based on key measurements
+#### Feature Description
+- **age**: Age in years
+- **sex**: Sex (1 = male; 0 = female)  
+- **cp**: Chest pain type (0-3)
+- **trestbps**: Resting blood pressure
+- **chol**: Serum cholesterol in mg/dl
+- **fbs**: Fasting blood sugar > 120 mg/dl
+- **restecg**: Resting electrocardiographic results
+- **thalach**: Maximum heart rate achieved
+- **exang**: Exercise induced angina
+- **oldpeak**: ST depression induced by exercise
+- **slope**: Slope of the peak exercise ST segment
+- **ca**: Number of major vessels colored by fluoroscopy
+- **thal**: Thalassemia type
+- **target**: Heart disease diagnosis (0 = no disease, 1 = disease)
 
-### Technical Implementation Details
+### Implementation Code
 
-#### Code Architecture
 ```python
-# Modular pipeline structure
-preprocessor = Pipeline([
-    ('imputer', SimpleImputer(strategy='mean')),
-    ('scaler', StandardScaler()),
-    ('selector', SelectKBest(score_func=f_classif, k=15))
-])
+# Import required libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-classifiers = {
-    'logistic': LogisticRegression(),
-    'svm': SVC(probability=True),
-    'rf': RandomForestClassifier(),
-    'xgb': XGBClassifier()
+# Load data
+df = pd.read_csv('heart.csv')
+
+# Basic exploration
+print("Dataset Shape:", df.shape)
+print("Target distribution:")
+print(df['target'].value_counts())
+
+# Split data
+X = df.drop('target', axis=1)
+y = df['target']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 1. Basic Decision Tree
+dt_basic = DecisionTreeClassifier(random_state=42)
+dt_basic.fit(X_train, y_train)
+y_pred_basic = dt_basic.predict(X_test)
+
+# 2. Optimized Decision Tree
+dt_optimized = DecisionTreeClassifier(
+    max_depth=5,
+    min_samples_split=10,
+    min_samples_leaf=5,
+    random_state=42
+)
+dt_optimized.fit(X_train, y_train)
+y_pred_optimized = dt_optimized.predict(X_test)
+
+# 3. Random Forest
+rf = RandomForestClassifier(
+    n_estimators=100,
+    max_depth=5,
+    random_state=42
+)
+rf.fit(X_train, y_train)
+y_pred_rf = rf.predict(X_test)
+
+# Evaluate models
+models = {
+    'Basic Decision Tree': (y_pred_basic, dt_basic),
+    'Optimized Decision Tree': (y_pred_optimized, dt_optimized),
+    'Random Forest': (y_pred_rf, rf)
 }
+
+for name, (pred, model) in models.items():
+    accuracy = accuracy_score(y_test, pred)
+    print(f"\n{name}:")
+    print(f"Accuracy: {accuracy:.4f}")
+    print(classification_report(y_test, pred))
