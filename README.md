@@ -1,4 +1,4 @@
-# 📘 Machine Learning Project Tasks & Outcomes
+# 📘 Artificial Intelligence and  Machine Learning Project Tasks & Outcomes
 
 ## 🛠️ Task 1: Data Cleaning & Preprocessing
 **Dataset:** Titanic  
